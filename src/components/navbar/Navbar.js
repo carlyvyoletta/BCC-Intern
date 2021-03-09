@@ -4,9 +4,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [navState, setNavState] = useState("home");
-  const handleChange = e => {
-    setNavState(e.target.name);
+
+  const [navState, setNavState] = useState("Home");
+  const handleChange = (e) => {
+    setNavState(e.target.innerText);
   };
 
   return (
@@ -19,10 +20,9 @@ const Navbar = () => {
           <Link to="/">
             <span
               className={`navbar-menu-item ${
-                navState === "home" && "navbar-menu-active"
+                navState === "Home" && "navbar-menu-active"
               }`}
               onClick={handleChange}
-              name="home"
             >
               Home
             </span>
@@ -30,10 +30,9 @@ const Navbar = () => {
           <Link to="/product">
             <span
               className={`navbar-menu-item ${
-                navState === "product" && "navbar-menu-active"
+                navState === "Produk" && "navbar-menu-active"
               }`}
               onClick={handleChange}
-              name="product"
             >
               Produk
             </span>
@@ -41,10 +40,9 @@ const Navbar = () => {
           <Link to="/tracking">
             <span
               className={`navbar-menu-item ${
-                navState === "tracking" && "navbar-menu-active"
+                navState === "Tracking" && "navbar-menu-active"
               }`}
               onClick={handleChange}
-              name="tracking"
             >
               Tracking
             </span>
@@ -52,10 +50,9 @@ const Navbar = () => {
           <Link to="about">
             <span
               className={`navbar-menu-item ${
-                navState === "about" && "navbar-menu-active"
+                navState === "About Us" && "navbar-menu-active"
               }`}
               onClick={handleChange}
-              name="about"
             >
               About Us
             </span>
@@ -63,10 +60,9 @@ const Navbar = () => {
           <Link to="trolley">
             <span
               className={`navbar-menu-item ${
-                navState === "trolley" && "navbar-menu-active"
+                navState === "Trolley" && "navbar-menu-active"
               }`}
               onClick={handleChange}
-              name="trolley"
             >
               Trolley
             </span>
