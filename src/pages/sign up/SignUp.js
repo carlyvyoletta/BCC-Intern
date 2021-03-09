@@ -23,7 +23,8 @@ const SignUp = () => {
       email: Email,
       password: Password,
     }).then((res) => {
-      res.status === 200 && setAuthTokens(res.data.data.access_token)
+      res.status === 200 && setAuthTokens(res.data.data)
+      console.log(res);
   })
   };
 
