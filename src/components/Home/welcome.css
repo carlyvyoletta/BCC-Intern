@@ -1,0 +1,32 @@
+.welcome-container {
+    margin: 0 auto ;
+    height: 100vh;
+    padding: 150px 100px;
+}
+
+.welcome-wrapper {
+    margin: 0 auto ;
+    width: 1200px;
+
+}
+
+.fa-shopping-cart {
+    margin-left: 8px;
+}
+
+.welcome-text-wrapper {
+    padding: 50px 0;
+    max-width: 500px;
+    float: left;
+    margin-right: 140px;
+}
+
+.welcome-button-chat {
+    position: fixed;
+    border-radius: 50%;
+    bottom: 70px;
+    right: 120px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+}

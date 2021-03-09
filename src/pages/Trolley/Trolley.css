@@ -1,0 +1,22 @@
+.trolley-container {
+    margin: 0 auto ;
+    height: 100vh;
+    padding: 150px 100px;
+}
+
+.trolley-wrapper {
+    margin: 0 auto ;
+    width: 1200px;
+}
+
+.trolley-text-wrapper {
+    padding: 25px 50px;
+    max-width: 700px;
+    float: right;
+}
+
+.trolley-image {
+    margin-top: 30px;
+    float: right;
+    
+}

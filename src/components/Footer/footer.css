@@ -1,0 +1,26 @@
+.footer-container {
+    height: min-content;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 30px 50px;
+    background-color: whitesmoke;
+}
+
+.footer-contents {
+    margin: 0 auto;
+    align-items: center !important;
+
+}
+
+.fa-whatsapp-square, .fa-instagram-square, .fa-envelope, .fa-facebook{
+    margin-right: 5px;
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    margin: 0 auto !important;
+    justify-content: space-between;
+    align-items: center !important;
+    gap: 20px;
+}

@@ -1,0 +1,13 @@
+.tracking-container {
+    height: 100vh;
+    padding: 100px 50px;
+}
+
+.tracking-contents{
+    margin: 0 auto;
+    padding: 10px 100px;
+}
+
+.tracking-searchbar {
+    width: 500px;
+}

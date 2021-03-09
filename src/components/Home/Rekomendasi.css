@@ -1,0 +1,26 @@
+.rekomendasi-container {
+    height: 80vh;
+    margin: 0 auto;
+    padding: 50px 50px;
+    background-color: rgb(204, 197, 167);
+}
+
+.rekomendasi-container h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.carousel-wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: whitesmoke;
+}
+
+.carousel-items {
+    height:min-content;
+    margin: 0 auto;
+    padding: 50px 25px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+}
