@@ -13,7 +13,7 @@ const Product = () => {
         <h1>KATALOG PRODUK</h1>
         <Search className="product-searchbar" placeholder="cari produk" />
         <div className="product-items">
-          <Link to="/trolley">
+          <Link to="/productdetail">
             <Card
               hoverable
               style={{ width: 240 }}

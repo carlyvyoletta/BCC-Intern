@@ -110,7 +110,7 @@ function Navbar() {
               <Button>SIGN IN</Button>
             </Link>
           )}
-          <Link to="api.whatsapp.com/send?phone=6289643504876">
+          <Link>
             <button className="welcome-button-chat">
               <i
                 className="fas fa-comment-dots"

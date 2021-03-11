@@ -1,11 +1,12 @@
 .welcome-container {
     margin: 0 auto ;
     height: 100vh;
-    padding: 150px 100px;
+    background-color: #003d33;
 }
 
 .welcome-wrapper {
     margin: 0 auto ;
+    padding-top: 50px;
     width: 1200px;
 
 }
@@ -14,12 +15,30 @@
     margin-left: 8px;
 }
 
+.welcome-image {
+    padding-top: 100px;
+}
+
 .welcome-text-wrapper {
-    padding: 50px 0;
     max-width: 500px;
     float: left;
     margin-right: 140px;
 }
+
+.welcome-text-wrapper h1{
+    font-size: 100px;
+    color: #fff;
+}
+
+.welcome-text-wrapper p{
+    color: #fff;
+}
+
+.welcome-text-wrapper .bengkel-text{
+    font-size: 100px;
+    color:#F1C066;
+}
+
 
 .welcome-button-chat {
     position: fixed;

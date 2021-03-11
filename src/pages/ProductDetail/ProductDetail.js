@@ -1,13 +1,18 @@
-import "./welcome.css";
-import { Button, Image } from "antd";
+import "./productdetail.css";
+import { Image } from "antd";
+import { InputNumber } from "antd";
 
-const Welcome = () => {
+function onChange(value) {
+  console.log("changed", value);
+}
+
+const ProductDetail = () => {
   return (
-    <div className="welcome-container">
-      <div className="welcome-wrapper">
-        <div className="welcome-text-wrapper">
-          <h1>Toko <span className="bengkel-text">Bengkel</span></h1>
-          <p className="welcome-desc">
+    <div className="pd-container">
+      <div className="pd-wrapper">
+        <div className="pd-text-wrapper">
+          <h1>Lorem Ipsum</h1>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -16,11 +21,14 @@ const Welcome = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <Button className="welcome-button" type="primary">
-            Order Now <i className="fas fa-shopping-cart"></i>
-          </Button>
+          <p>Merek : Honda</p>
+          <p>Harga</p>
+          <h2>Rp 500.000</h2>
+          <p>Jumlah</p>
+          <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
+          <button>Tambah ke troli</button>
         </div>
-        <div className="welcome-image">
+        <div className="pd-image">
           <Image
             width={500}
             src="https://reparasimobil.com/wp-content/uploads/2020/11/c02f5b75d1-300x216.jpg"
@@ -31,4 +39,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default ProductDetail;

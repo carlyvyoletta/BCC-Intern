@@ -1,22 +1,39 @@
 .trolley-container {
-    margin: 0 auto ;
+    margin: 20px auto;
     height: 100vh;
-    padding: 150px 100px;
 }
 
 .trolley-wrapper {
-    margin: 0 auto ;
+    margin: 0 auto;
     width: 1200px;
 }
 
 .trolley-text-wrapper {
     padding: 25px 50px;
-    max-width: 700px;
-    float: right;
+    max-width: 800px;
+    float: left;
 }
 
 .trolley-image {
-    margin-top: 30px;
-    float: right;
-    
+    float: left;
+    margin: 30px 25px;
+
+}
+
+.product-harga {
+    float: left;
+    margin-right: 200px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.produt-buttonAddMinTrash{
+    margin-top: 900px;
+    border: aqua 1px solid;
+}
+
+.fas {
+    padding: 10px;
 }
