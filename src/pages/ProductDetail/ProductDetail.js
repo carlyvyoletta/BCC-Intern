@@ -1,6 +1,7 @@
 import "./productdetail.css";
 import { Image } from "antd";
 import { InputNumber } from "antd";
+import { Link } from "react-router-dom";
 
 function onChange(value) {
   console.log("changed", value);
@@ -27,6 +28,9 @@ const ProductDetail = () => {
           <p>Jumlah</p>
           <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
           <button>Tambah ke troli</button>
+          <Link to="/order">
+          <button>Beli Sekarang</button>
+          </Link>
         </div>
         <div className="pd-image">
           <Image

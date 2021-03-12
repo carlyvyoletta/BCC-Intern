@@ -1,24 +1,30 @@
 import "./signin.css";
 import { Link } from "react-router-dom";
-import React, {useState} from "react";
-import TokoBengkel from '../../api/TokoBengkel'
-
+import React, { useState } from "react";
+import TokoBengkel from "../../api/TokoBengkel";
+import { useAuth } from "../../config/Auth";
+import {Redirect} from 'react-router-dom'
 
 const SignIn = () => {
-
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const { setAuthTokens } = useAuth();
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleSignIn = async (e) => {
     e.preventDefault();
     await TokoBengkel.post("/api/auth/login", {
       email: Email,
-      password: Password
-    }).then ((res) => {
-      // res.status === 200 && setAuthTokens(res.data.data.access_token)
-      console.log(res)
-    })
+      password: Password,
+    }).then((res) => {
+      res.status === 200 && setAuthTokens(res.data.token);
+      setLoggedIn(true)
+    });
   };
+
+  if (isLoggedIn){
+    return <Redirect to={"/trolley"} />
+  }
 
   return (
     <div className="signin-container">
@@ -28,16 +34,28 @@ const SignIn = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="signin-form">
-        <p>Email</p>
-        <input className="signin-input" placeholder="email" onChange={(e) => setEmail(e.target.value)}/>
-        <p>Password</p>
-        <input className="signin-input" placeholder="password" onChange={(e) => setPassword(e.target.value)}/>
-        <Link to="signup">
-          <p className="navigate-signin">Belum punya akun? Daftar disini!</p>
-        </Link>
-        <input className="contact-submit" type="submit" value="Submit"></input>
-        </div>
+        <form onSubmit={handleSignIn} className="signin-form">
+          <p>Email</p>
+          <input
+            className="signin-input"
+            placeholder="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p>Password</p>
+          <input
+            className="signin-input"
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Link to="signup">
+            <p className="navigate-signin">Belum punya akun? Daftar disini!</p>
+          </Link>
+          <input
+            className="contact-submit"
+            type="submit"
+            value="Submit"
+          ></input>
+        </form>
       </div>
     </div>
   );

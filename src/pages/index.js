@@ -5,6 +5,7 @@ import Product from './Product/Product'
 import ProdukDetail from './ProductDetail/ProductDetail'
 import Tracking from './Tracking/Tracking'
 import Trolley from './Trolley/Trolley'
+import Order from './Order/Order'
 
 export {SignIn};
 export {SignUp};
@@ -13,3 +14,4 @@ export {Product};
 export {ProdukDetail};
 export {Tracking};
 export {Trolley};
+export {Order};

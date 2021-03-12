@@ -11,3 +11,12 @@
 .tracking-searchbar {
     width: 500px;
 }
+
+.tracking-table{
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px 20px;
+  }

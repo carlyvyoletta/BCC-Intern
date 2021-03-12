@@ -62,13 +62,13 @@
     height: 100%;
   }
   
-  .nav-links:hover {
+  .nav-links .nav-item:hover {
     border-bottom: 2px solid #00A488;
     transition: all 0.2s ease-out;
   }
   
   .fa-bars {
-    color: #fff;
+    color: #003d33;
   }
   
   .nav-links-mobile {
@@ -108,12 +108,13 @@
       text-align: center;
       padding: 2rem;
       width: 100%;
+      color: white;
       display: table;
     }
   
     .nav-links:hover {
-      background-color: #fff;
-      color: #242424;
+      background-color: #00A488;
+      color: #fff;
       border-radius: 0;
     }
   
@@ -135,7 +136,7 @@
     }
   
     .fa-times {
-      color: #fff;
+      color: #003d33;
       font-size: 2rem;
     }
   

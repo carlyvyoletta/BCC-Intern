@@ -110,14 +110,14 @@ function Navbar() {
               <Button>SIGN IN</Button>
             </Link>
           )}
-          <Link>
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=6289643504876">
             <button className="welcome-button-chat">
               <i
                 className="fas fa-comment-dots"
                 style={{ fontSize: "25px" }}
               ></i>
             </button>
-          </Link>
+          </a>
         </div>
       </nav>
     </>

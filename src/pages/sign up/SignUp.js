@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import TokoBengkel from "../../api/TokoBengkel";
 import {useAuth} from '../../config/Auth'
+import {Redirect} from 'react-router-dom'
 
 const SignUp = () => {
   const [Nama, setNama] = useState("");
@@ -10,6 +11,7 @@ const SignUp = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const {setAuthTokens} = useAuth();
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -23,10 +25,14 @@ const SignUp = () => {
       email: Email,
       password: Password,
     }).then((res) => {
-      res.status === 200 && setAuthTokens(res.data.data)
-      console.log(res);
+      res.status === 200 && setAuthTokens(res.data.token)
+      setLoggedIn(true)
   })
   };
+
+  if (isLoggedIn){
+    return <Redirect to={"/trolley"} />
+  }
 
   return (
     <div className="signup-container">

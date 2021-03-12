@@ -1,0 +1,22 @@
+.order-container {
+    height: 100vh;
+}
+
+.order-title {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.order-form-wrapper {
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #CAA052;
+}
+
+.button-generate-uniqueCode{
+    display: flexbox;
+}
+
