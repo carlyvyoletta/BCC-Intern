@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./App.css";
 import Home from './components/Home/Home';
 import { Navbar2, Footer} from "./components";
-import { SignIn, SignUp, About, Product, Tracking, ProdukDetail, Trolley, Order} from "./pages";
+import { SignIn, SignUp, About, Product, Tracking, ProdukDetail, Trolley, Order, History} from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthContext } from "./config/Auth";
 import PrivateRoute from './config/PrivateRoute';
@@ -31,6 +31,7 @@ const App = () => {
             <Route path="/tracking" component={Tracking}/>
             <Route path="/trolley" component={Trolley}/>
             <PrivateRoute path="/order" component={Order}/>
+            <Route path="/history" component={History}/>
           </Switch>
           <Footer />
       </Router>

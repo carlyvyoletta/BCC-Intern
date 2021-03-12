@@ -2,42 +2,62 @@
     height: min-content;
     padding: 100px 50px;
     margin: 0 auto;
+    background-color: #003d33;
 }
 
-.signin-form-wrapper h1, .signin-text{
+.signin-form-wrapper h1,
+.signin-text {
     padding: 0 50px 10px;
     text-align: center;
     margin: 0 auto;
     align-items: center;
+    font-weight: bold;
+    color: white;
 }
 
-.signin-form-wrapper .signin-text{
+.signin-form-wrapper .signin-text {
     padding-bottom: 30px;
 }
 
-.signin-form-wrapper{
+.signin-form-wrapper {
     padding: 20px 50px 50px 50px;
     margin: 0 auto;
     width: 800px;
     height: min-content;
-    border: black 1px solid;
-    background-color: whitesmoke;
+    border: whitesmoke 1px solid;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+    border-radius: 30px;
 }
 
-.signin-form .contact-submit{
-   text-align: center !important;
-   margin: 0 auto;
+.signin-form .contact-submit {
+    text-align: center !important;
+    margin: 0 auto;
+    align-items: center;
+    color: #003D33;
+    background: white;
 }
 
-.signin-form p{
+.signin-form p {
     padding-top: 10px;
+    color: white;
 }
 
-.signin-form .signin-input{
+.navigate-signin .daftar-disini{
+    padding-top: 10px;
+    color: #F1C066;
+    margin-left: 5px;
+}
+
+.signin-form .signin-input {
     width: 100%;
+    padding: 10px;
 }
 
 .contact-submit {
-    display:inline-flexbox;
+    display: inline-flexbox;
     color: black;
-  }
+}
+
+.signin-form .button-signIn {
+    padding: 10px;
+}

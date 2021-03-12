@@ -1,0 +1,17 @@
+.history-container {
+    height: 100vh;
+}
+
+.history-title {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.history-form-wrapper {
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #CAA052;
+}

@@ -1,54 +1,53 @@
-import "./order.css";
-import { Link } from "react-router-dom";
-import { Upload } from "antd";
+import "./history.css";
 
-const Order = () => {
-
+const History = () => {
   return (
-    <div className="order-container">
-      <div className="order-title">
-        <h1>Order</h1>
+    <div className="history-container">
+      <div className="history-title">
+        <h1>History</h1>
       </div>
-      <div className="order-form-wrapper">
-        <form className="order-form">
+      <div className="history-form-wrapper">
+        <form className="history-form">
           <p>Nama</p>
           <input
-            className="order-input"
+            className="history-input"
             placeholder="Nama"
             // onChange={(e) => setEmail(e.target.value)}
           />
           <p>Nomor Handphone</p>
           <input
-            className="order-input"
+            className="history-input"
             placeholder="Nomor Handphone"
             // onChange={(e) => setPassword(e.target.value)}
           />
           <p>Jenis Kendaraan</p>
           <input
-            className="order-input"
+            className="history-input"
             placeholder="Jenis Kendaraan"
             // onChange={(e) => setPassword(e.target.value)}
           />
           <p>Plat Nomor</p>
           <input
-            className="order-input"
+            className="history-input"
             placeholder="Plat Nomor"
             // onChange={(e) => setPassword(e.target.value)}
           />
-          <p>Keterangan Order</p>
+          <p>Keterangan history</p>
           <input
-            className="order-input"
-            placeholder="Keterangan Order"
+            className="history-input"
+            placeholder="Keterangan history"
             // onChange={(e) => setPassword(e.target.value)}
           />
           <p>Keluhan</p>
           <input
-            className="order-input"
+            className="history-input"
             placeholder="Keluhan"
             // onChange={(e) => setPassword(e.target.value)}
           />
           <p>Keluhan</p>
-          <button><i className="fas fa-upload"></i> upload</button>
+          <button>
+            <i className="fas fa-upload"></i> upload
+          </button>
           <div className="button-generate-uniqueCode">
             <input
               className="contact-submit"
@@ -62,4 +61,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default History;

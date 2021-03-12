@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import TokoBengkel from "../../api/TokoBengkel";
 import { useAuth } from "../../config/Auth";
-import {Redirect} from 'react-router-dom'
+import { Redirect } from "react-router-dom";
 
 const SignIn = () => {
   const [Email, setEmail] = useState("");
@@ -18,12 +18,12 @@ const SignIn = () => {
       password: Password,
     }).then((res) => {
       res.status === 200 && setAuthTokens(res.data.token);
-      setLoggedIn(true)
+      setLoggedIn(true);
     });
   };
 
-  if (isLoggedIn){
-    return <Redirect to={"/trolley"} />
+  if (isLoggedIn) {
+    return <Redirect to={"/trolley"} />;
   }
 
   return (
@@ -48,12 +48,15 @@ const SignIn = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Link to="signup">
-            <p className="navigate-signin">Belum punya akun? Daftar disini!</p>
+            <p className="navigate-signin">
+              Belum punya akun?
+              <span className="daftar-disini">Daftar disini!</span>
+            </p>
           </Link>
-          <input
+          <input className="button-signIn"
             className="contact-submit"
             type="submit"
-            value="Submit"
+            value="Sign In"
           ></input>
         </form>
       </div>

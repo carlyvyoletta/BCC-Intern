@@ -1,6 +1,11 @@
+import React, {useState} from 'react';
 import "./trolley.css";
 
 const Trolley = () => {
+
+  const [Order, setOrder] = useState("");
+
+  
   return (
     <div className="trolley-container">
       <div className="trolley-wrapper">

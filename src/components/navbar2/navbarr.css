@@ -78,6 +78,11 @@
   .menu-icon {
     display: none;
   }
+
+  .navbar-avatar-item {
+    padding-right: 20px;
+
+  }
   
   @media screen and (max-width: 960px) {
     .NavbarItems {
