@@ -6,9 +6,10 @@ const { Search } = Input;
 const Tracking = () => {
   return (
     <div className="tracking-container">
-      <div className="tracking-contents">
+      <div className="tracking-title">
         <h1>Tracking</h1>
-        <p>Masukkan Kode</p>
+      </div>
+      <div className="tracking-contents">
         <div className="tracking-searchbar">
           <Search placeholder="Kode Unik" enterButton="Cari" size="large" />
         </div>
@@ -33,7 +34,8 @@ const Tracking = () => {
             <tr>
               <th>Harga Total</th>
               <td>xxx</td>
-            </tr>            <tr>
+            </tr>{" "}
+            <tr>
               <th>Status Kendaraan</th>
               <td>xxx</td>
             </tr>

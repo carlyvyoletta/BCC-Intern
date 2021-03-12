@@ -13,7 +13,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const { setAuthTokens } = useAuth();
+  const { setAuthTokens, authTokens } = useAuth();
 
   const [navState, setNavState] = useState("Home");
   const handleChange = (e) => {
@@ -138,19 +138,21 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && (
+          {!authTokens && button && (
             <Link to="/Signin" className="nav-links" onClick={closeMobileMenu}>
               <Button>SIGN IN</Button>
             </Link>
           )}
-          <Dropdown overlay={menu}>
-            <a
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
-              <Avatar size={40}></Avatar> <DownOutlined />
-            </a>
-          </Dropdown>
+          {authTokens && (
+            <Dropdown overlay={menu}>
+              <a
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                <Avatar size={40}></Avatar> <DownOutlined />
+              </a>
+            </Dropdown>
+          )}
           <div className="button-chat-directWA">
             <a
               target="_blank"

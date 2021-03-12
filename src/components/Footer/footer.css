@@ -3,13 +3,21 @@
     margin: 0 auto;
     justify-content: space-between;
     padding: 30px 50px;
-    background-color: whitesmoke;
+    background-color: #003d33;
 }
 
 .footer-contents {
     margin: 0 auto;
     align-items: center !important;
 
+}
+
+.footer-contents h3{
+    color: #FFD180;
+}
+
+.footer-contents p{
+    color: white;
 }
 
 .fa-whatsapp-square, .fa-instagram-square, .fa-envelope, .fa-facebook{

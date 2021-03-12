@@ -1,7 +1,17 @@
 .about-container {
     margin: 0 auto ;
     height: 100vh;
-    padding: 150px 100px;
+}
+
+.about-title {
+    height: 30vh;
+    background-color: #003d33;
+}
+
+.about-title h1 {
+    padding: 70px 50px;
+    color: #FFD180;
+    font-size: 2.5rem;
 }
 
 .about-wrapper {

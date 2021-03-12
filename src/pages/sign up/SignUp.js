@@ -2,15 +2,15 @@ import "./signup.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import TokoBengkel from "../../api/TokoBengkel";
-import {useAuth} from '../../config/Auth'
-import {Redirect} from 'react-router-dom'
+import { useAuth } from "../../config/Auth";
+import { Redirect } from "react-router-dom";
 
 const SignUp = () => {
   const [Nama, setNama] = useState("");
   const [Email, setEmail] = useState("");
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
-  const {setAuthTokens} = useAuth();
+  const { setAuthTokens } = useAuth();
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleSignUp = async (e) => {
@@ -25,13 +25,13 @@ const SignUp = () => {
       email: Email,
       password: Password,
     }).then((res) => {
-      res.status === 200 && setAuthTokens(res.data.token)
-      setLoggedIn(true)
-  })
+      res.status === 200 && setAuthTokens(res.data.token);
+      setLoggedIn(true);
+    });
   };
 
-  if (isLoggedIn){
-    return <Redirect to={"/trolley"} />
+  if (isLoggedIn) {
+    return <Redirect to={"/trolley"} />;
   }
 
   return (
@@ -46,25 +46,32 @@ const SignUp = () => {
           <p>Nama Lengkap</p>
           <input
             className="signup-input"
+            placeholder="Nama Lengkap"
             onChange={(e) => setNama(e.target.value)}
           />
           <p>Email</p>
           <input
             className="signup-input"
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <p>Username</p>
           <input
             className="signup-input"
+            placeholder="Username"
             onChange={(e) => setUsername(e.target.value)}
           />
           <p>Password</p>
           <input
             className="signup-input"
+            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <Link to="Signin">
-            <p className="navigate-signup">Sudah punya akun? sign in disini!</p>
+            <p className="navigate-signup">
+              Sudah punya akun?
+              <span className="signIn-disini">sign in disini!</span>
+            </p>
           </Link>
           <input
             className="contact-submit"

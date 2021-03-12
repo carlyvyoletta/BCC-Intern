@@ -8,7 +8,6 @@
     margin: 0 auto ;
     padding-top: 50px;
     width: 1200px;
-
 }
 
 .fa-shopping-cart {
@@ -39,8 +38,13 @@
     color:#F1C066;
 }
 
+.welcome-wrapper Button{
+    background-color: #F1C066;
+    padding: 5px;
+}
 
 .welcome-button-chat {
+    background-color: #F1C066;
     position: fixed;
     border-radius: 50%;
     bottom: 70px;

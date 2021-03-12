@@ -1,8 +1,14 @@
 import "./order.css";
 import { Link } from "react-router-dom";
 import { Upload } from "antd";
+import React, {useState} from 'react';
 
 const Order = () => {
+
+  // const [Nama, setNama] = useState("");
+  // const [NoHP, setNoHP] = useState("");
+  // const [JenisKendaraan, setJenisKendaraan] = useState("");
+  // const [PlatNomor, setPlatNomor] = useState("");
 
   return (
     <div className="order-container">
@@ -47,7 +53,6 @@ const Order = () => {
             placeholder="Keluhan"
             // onChange={(e) => setPassword(e.target.value)}
           />
-          <p>Keluhan</p>
           <button><i className="fas fa-upload"></i> upload</button>
           <div className="button-generate-uniqueCode">
             <input

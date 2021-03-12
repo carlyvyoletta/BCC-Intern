@@ -2,6 +2,7 @@
     height: min-content;
     padding: 100px 50px;
     margin: 0 auto;
+    background-color: #003d33;
 }
 
 .signup-form-wrapper h1, .signup-text{
@@ -9,6 +10,8 @@
     text-align: center;
     margin: 0 auto;
     align-items: center;
+    font-weight: bold;
+    color: white;
 }
 
 .signup-form-wrapper .signup-text{
@@ -21,25 +24,30 @@
     margin: 0 auto;
     width: 800px;
     height: min-content;
-    border: black 1px solid;
-    background-color: whitesmoke;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+    border-radius: 30px;
+    border: whitesmoke 1px solid;
 }
 
 .signup-form .contact-submit{
    text-align: center !important;
    margin: 0 auto;
+   align-items: center;
+   color: #003D33;
+   background: white;
 }
 
 .signup-form p{
     padding-top: 10px;
+    color: white;
 }
 
 .signup-form .signup-input{
     width: 100%;
+    padding: 10px;
 }
 
 .contact-submit {
     display:inline-flexbox;
     color: black;
-    background-color:cornflowerblue;
   }

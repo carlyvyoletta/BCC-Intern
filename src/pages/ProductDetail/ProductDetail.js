@@ -1,43 +1,82 @@
 import "./productdetail.css";
-import { Image } from "antd";
+import { Card, Image } from "antd";
 import { InputNumber } from "antd";
-import { Link } from "react-router-dom";
-
-function onChange(value) {
-  console.log("changed", value);
-}
+import { Link, useParams } from "react-router-dom";
+import TokoBengkel from "../../api/TokoBengkel";
+import React, { useState, useEffect } from "react";
+import { useAuth } from "../../config/Auth";
 
 const ProductDetail = () => {
+  const { id } = useParams();
+  const { authTokens } = useAuth();
+
+  const [getIdProduct, setgetIdProduct] = useState({
+    name: "",
+    description: "",
+    manufacture: "",
+    price: 0,
+    image_link: "",
+  });
+
+  useEffect(() => {
+    const FetchProduct = async () => {
+      const resProduct = await TokoBengkel.get(`/api/product/${id}`);
+      setgetIdProduct({
+        name: resProduct.data.data.name,
+        description: resProduct.data.data.description,
+        manufacture: resProduct.data.data.manufacture,
+        price: resProduct.data.data.price,
+        image_link: resProduct.data.data.image_link,
+      });
+    };
+
+    FetchProduct();
+  }, []);
+
+  const [quantity, setQuantity] = useState(1);
+
+  const addItem = async () => {
+    await TokoBengkel.post(
+      "/api/cart/new",
+      {
+        product_id: parseInt(id),
+        quantity: quantity,
+      },
+      {
+        headers: { Authorization: `Bearer ${authTokens}` },
+      }
+    );
+  };
+
   return (
     <div className="pd-container">
+      <div className="pd-title">
+        <h1>PRODUCT</h1>
+      </div>
       <div className="pd-wrapper">
-        <div className="pd-text-wrapper">
-          <h1>Lorem Ipsum</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>Merek : Honda</p>
-          <p>Harga</p>
-          <h2>Rp 500.000</h2>
-          <p>Jumlah</p>
-          <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
-          <button>Tambah ke troli</button>
-          <Link to="/order">
-          <button>Beli Sekarang</button>
-          </Link>
-        </div>
-        <div className="pd-image">
-          <Image
-            width={500}
-            src="https://reparasimobil.com/wp-content/uploads/2020/11/c02f5b75d1-300x216.jpg"
-          />
-        </div>
+        <Card className="pd-card">
+          <div className="pd-image">
+            <Image width={300} src={getIdProduct.image_link} />
+          </div>
+          <div className="pd-text-wrapper">
+            <h1>{getIdProduct.name}</h1>
+            <p>{getIdProduct.description}</p>
+            <p>Merek: {getIdProduct.manufacture}</p>
+            <p>Harga : Rp{getIdProduct.price}</p>
+            <p className="pd-jumlah-txt">Jumlah</p>
+            <InputNumber
+              className="pd-inputQuantity"
+              min={1}
+              max={10}
+              defaultValue={3}
+              onChange={(value) => setQuantity(value)}
+            />
+            <button onClick={addItem}>Tambah ke troli</button>
+            <Link to="/order">
+              <button>Beli Sekarang</button>
+            </Link>
+          </div>
+        </Card>
       </div>
     </div>
   );

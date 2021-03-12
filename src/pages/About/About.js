@@ -4,6 +4,9 @@ import { Image } from "antd";
 const About = () => {
   return (
     <div className="about-container">
+      <div className="about-title">
+        <h1>ABOUT <span className="about-us-txt">US</span></h1>
+      </div>
       <div className="about-wrapper">
         <div className="about-text-wrapper">
           <h1>Lorem Ipsum</h1>

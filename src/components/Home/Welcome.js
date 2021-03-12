@@ -16,7 +16,7 @@ const Welcome = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <Button className="welcome-button" type="primary">
+          <Button>
             Order Now <i className="fas fa-shopping-cart"></i>
           </Button>
         </div>

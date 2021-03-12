@@ -3,9 +3,14 @@
 }
 
 .history-title {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
+    height: 30vh;
+    background-color: #003d33;
+}
+
+.history-title h1 {
+    padding: 70px 50px;
+    color: #FFD180;
+    font-size: 2.5rem;
 }
 
 .history-form-wrapper {
