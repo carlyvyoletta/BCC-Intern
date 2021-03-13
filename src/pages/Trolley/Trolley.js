@@ -4,6 +4,7 @@ import { useAuth } from "../../config/Auth";
 import TokoBengkel from "../../api/TokoBengkel";
 import { useParams } from "react-router-dom";
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 
 const Trolley = () => {
   const { Id } = useParams();
@@ -50,42 +51,51 @@ const Trolley = () => {
       <div className="trolley-title">
         <h1>TROLLEY</h1>
       </div>
-      
       {Order.map((item) => (
-        <Card key={item.Id} className="trolley-card">
-          <div className="trolley-wrapper">
-            <div className="trolley-image">
-              <img
-                style={{ width: 150 }}
-                alt="gambar"
-                src={item.ImageLink}
-                className="img-fluid d-block"
-              />
-            </div>
-            <div className="trolley-text-wrapper">
-              <h1>{item.Name}</h1>
-              <p>{item.Description}</p>
-              <p>Merek : {item.Manufacture}</p>
-              <p>Jumlah : {item.Quantity}</p>
-              <div className="product-harga">
-                <p>Harga</p>
-                <h2>Rp {item.Price} </h2>
+        <div>
+          <Card key={item.Id} className="trolley-card">
+            <div className="trolley-wrapper">
+              <div className="trolley-image">
+                <img
+                  style={{ width: 150 }}
+                  alt="gambar"
+                  src={item.ImageLink}
+                  className="img-fluid d-block"
+                />
               </div>
-              <div className="produt-buttonAddMinTrash">
-                <button onClick={addQuantityItem} className="btn btn-plus">
-                  <i className="fas fa-plus"></i>
-                </button>
-                <button onClick={reduceQuantityItem} className="btn btn-min">
-                  <i className="fas fa-minus"></i>
-                </button>
-                <button onClick={deleteQuantityItem} className="btn btn-trash">
-                  <i className="fas fa-trash"></i>
-                </button>
+              <div className="trolley-text-wrapper">
+                <h1>{item.Name}</h1>
+                <p>{item.Description}</p>
+                <p>Merek : {item.Manufacture}</p>
+                <p>Jumlah : {item.Quantity}</p>
+                <div className="product-harga">
+                  <p>Harga</p>
+                  <h2>Rp {item.Price} </h2>
+                </div>
+                <div className="produt-buttonAddMinTrash">
+                  <button onClick={addQuantityItem} className="btn btn-plus">
+                    <i className="fas fa-plus"></i>
+                  </button>
+                  <button onClick={reduceQuantityItem} className="btn btn-min">
+                    <i className="fas fa-minus"></i>
+                  </button>
+                  <button
+                    onClick={deleteQuantityItem}
+                    className="btn btn-trash"
+                  >
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </div>
       ))}
+      <Card className="btn-card">
+        <Link to="/order">
+          <button className="btn-order-trolley">Order Pesanan</button>
+        </Link>
+      </Card>
     </div>
   );
 };

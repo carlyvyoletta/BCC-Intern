@@ -16,11 +16,12 @@
 
 .about-wrapper {
     margin: 0 auto ;
+    padding: 70px 30px;
     width: 1200px;
 }
 
 .about-text-wrapper {
-    padding: 50px 0;
+    padding: 70px 0;
     max-width: 500px;
     float: left;
     margin-right: 140px;

@@ -48,11 +48,30 @@
 .btn {
     margin-right: 10px;
 }
-/* 
-.produt-buttonAddMinTrash{
-    margin-top: 900px;
-} */
+
+.btn-plus, .btn-min{
+    background-color: green !important;
+}
+
+.btn-trash{
+    background-color: red !important;
+}
 
 .fas {
     padding: 10px;
+}
+
+.btn-card {
+    margin: 20px auto !important;
+    width: 1000px;
+    background-color: #F1C066 !important;
+    border-radius: 20px !important;
+}
+
+.btn-order-trolley{
+    margin-left: 400px;
+    background-color: #00695C;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px;
 }

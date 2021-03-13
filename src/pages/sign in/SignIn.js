@@ -31,8 +31,7 @@ const SignIn = () => {
       <div onSubmit={handleSignIn} className="signin-form-wrapper">
         <h1>SIGN IN</h1>
         <p className="signin-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Welcome to TokoBengkel!
         </p>
         <form onSubmit={handleSignIn} className="signin-form">
           <p>Email</p>

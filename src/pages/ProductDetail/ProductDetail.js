@@ -71,7 +71,9 @@ const ProductDetail = () => {
               defaultValue={3}
               onChange={(value) => setQuantity(value)}
             />
+            <Link to="/trolley">
             <button onClick={addItem}>Tambah ke troli</button>
+            </Link>
             <Link to="/order">
               <button>Beli Sekarang</button>
             </Link>

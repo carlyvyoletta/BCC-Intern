@@ -2,7 +2,7 @@
     height: 80vh;
     margin: 0 auto;
     padding: 50px 50px;
-    background-color: rgb(204, 197, 167);
+    background-color: white;
 }
 
 .rekomendasi-container h1{
@@ -13,7 +13,7 @@
 .carousel-wrapper {
     margin: 0 auto;
     width: 1000px;
-    background-color: whitesmoke;
+    background-color: #F3CB80;
 }
 
 .carousel-items {

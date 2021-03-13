@@ -39,8 +39,7 @@ const SignUp = () => {
       <div className="signup-form-wrapper">
         <h1>SIGN UP</h1>
         <p className="signup-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Create Account For Free
         </p>
         <form onSubmit={handleSignUp} className="signup-form">
           <p>Nama Lengkap</p>

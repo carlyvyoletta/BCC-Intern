@@ -1,22 +1,57 @@
 .order-container {
-    height: 100vh;
+    height: min-content;
 }
 
 .order-title {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
+    height: 30vh;
+    background-color: #003d33;
+}
+
+.order-title h1 {
+    padding: 70px 50px;
+    color: #FFD180;
+    font-size: 2.5rem;
 }
 
 .order-form-wrapper {
-    margin: 0 auto;
-    width: 500px;
+    margin: 20px auto;
+    width: 800px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 50px;
     background-color: #CAA052;
 }
 
+.order-form p{
+    font-weight: bold;
+}
+
+.order-form .order-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
 .button-generate-uniqueCode{
+    margin-top: 20px;
     display: flexbox;
 }
 
+.btn-uploadSTNK{
+    background-color:#00695C;
+    color: white;    
+    padding-right: 10px !important ;
+    border-radius: 8px;
+}
+
+.upload-STNK-txt{
+    margin-top: 20px;
+}
+
+.button-generate-uniqueCode .contact-submit{
+    padding: 5px 10px;
+    background-color:  #00695C;
+    border-radius: 8px;
+    color: white;
+    margin-left: 280px;
+}

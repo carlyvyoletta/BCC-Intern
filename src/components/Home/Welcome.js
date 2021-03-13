@@ -1,5 +1,6 @@
 import "./welcome.css";
 import { Button, Image } from "antd";
+import WelcomePhoto from "../../asset/Home/introduction.png"
 
 const Welcome = () => {
   return (
@@ -23,7 +24,7 @@ const Welcome = () => {
         <div className="welcome-image">
           <Image
             width={500}
-            src="https://reparasimobil.com/wp-content/uploads/2020/11/c02f5b75d1-300x216.jpg"
+            src={WelcomePhoto}
           />
         </div>
       </div>
